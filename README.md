@@ -20,6 +20,7 @@ python3 run_dsms.py
 
 ```-sav```: integer value, 1: means save a video clip of the detected driver distraction events; 0: do not save the distraction events.
 
+```__main__``` function in ```run_dsms.py``` has many options (see comments in code) to tune DSMS to optimize accuracy/speed.
 
 ## Dependencies
 You should have OpenCV python working to run this application
