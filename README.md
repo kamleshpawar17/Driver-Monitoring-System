@@ -22,7 +22,7 @@ python3 run_dsms.py
 
 
 ## Dependencies
-You should have OpenCV python working to run.
+You should have OpenCV python working to run this application
 ```
 opencv-python (4.0.0.1)
 imutils
