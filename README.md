@@ -2,6 +2,7 @@
 
 This repo contains a project for DSMS using computer vision algorithms.
 
+![video](https://github.com/kamleshpawar17/DSMS/blob/main/readmeUploads/dsms.mp4)
 
 ## To run code
 ```
