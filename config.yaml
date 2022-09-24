@@ -1,0 +1,50 @@
+# ----- Params for Face Detection ---- #
+imgsz_disp: 480  # Image size to display
+imgsz_fd: 128  # Image size for face detection
+imgsz_fdlm: 128  # Image size for face landmark detection
+CONF_THRSHLD: 0.8  # confidence threshold for face detection
+frac_above_eye: 0.35  # fraction of bb above the eye line
+scale_bb_width: 1.75  # face bb width: eye-width * scale_bb_width
+aspect_ratio_bb: 1.4  # ratio of face bb: height/width
+fd_temporal_win: 3  # averaging window for face bb coordinates
+pose_temporal_win: 3  # averaging window for 14 face landmark points
+NUM: 50  # number of frames to compute the average frame rate
+ROBUST_ROT: True  # if true enable robust rotation of face
+ADJUST_RECT: True  # if true adjust the face box of the rotated face
+SHOW_FACE_BOX: False  # if true, show face box
+SHOW_ROT_BOX: True  # if true, show rotated face box
+BLINK_DETC: True  # if true, enable eye drowsiness detection
+PRINT_POSE: True  # if true, print roll, pitch and yaw of the face pose in image
+SHOW_FACE_LANDMARK: True  # if true, show 68 face landmark points
+SHOW_FACE_LANDMARK_5pt: False  # if true, show 5 face landmark points around eye
+SHOW_POSEBOX: True  # if true, show the face pose box
+HIST_EQ: True  # if true, enable histogram equalization of image
+HIST_EQ_FDLM: False # must be False if HIST_EQ: True
+SHOW_HIST_EQ: False  # if true, show histogram equalized image
+isAdjustFdFov: True  # if True, crop the image around face for detection
+showCropBox: False  # if true, show the ffd fov box
+
+# ----- Params for eye closure detection ---- #
+EYE_AR_CONSEC_FRAMES: 5 # Number of consecutive eye clousre frames after which warning is activated
+EAR_AVG_WIN: 10  # averaging window for eye aspect ratio
+WARNING_WIN: 10  # raise an alarm to driver if WARNING_WIN times eye closure is detected within in WARNING_TIME
+WARNING_TIME: 60
+ALERT_DUR: 10.  # if alert warning initiated, the next warning will not be initiated before ALERT_DUR
+WAR_DUR: 1.0  # if eye closure warning initiated, the next warning will not be initiated before ALERT_DUR
+USE_CALIB: True # if true, use the stored eye aspect ratio and head pose from the calibration scan
+DRIVER_ALERT_ALARM: True  # if true, enable the driver alert alarm
+DEBUG: False  # if true print the debug information
+
+# ---- paramas for distraction detection ---- #
+buff_size: 12  # averaging window size for the head pose yaw angle
+angle_thrshld_max: -25.0  # yaw angle threshold to initiate warning (left)
+# yaw angle threshold to initiate warning (right) - not implemented
+angle_thrshld_min: -5
+DISTR_DET: True  # if true, enable distraction warning
+
+# ---- params for calibration scan ----- #
+AVG_WIN: 256  # number of frame to compute the average eye-aspect ratio and yaw angle offset
+AVG_WIN_FDFOV: 64  # number of frame to compute fd FOV
+FovFdRatio: 2.0  # ratio of fdFov and fd bb
+
+
