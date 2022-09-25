@@ -161,8 +161,7 @@ def run_single_thread(config):
     drowsinessAlert_obj = drowsinessAlert(config)
 
     # ----- Eye closure detection ----- #
-    ear_obj = eye_closure_detection(EYE_AR_CONSEC_FRAMES=config['EYE_AR_CONSEC_FRAMES'], DEBUG=config['DEBUG'], EAR_AVG_WIN=config['EAR_AVG_WIN'],
-                                    DRIVER_ALERT_ALARM=config['DRIVER_ALERT_ALARM'])
+    ear_obj = eye_closure_detection(config)
     # ----- Distraction detection ---- #
     if config['DISTR_DET']:
         distraction_obj = distraction_detection(buff_size=config['buff_size'], angle_thrshld_max=config['angle_thrshld_max'],
@@ -232,8 +231,7 @@ def run_multi_thread(config):
     delTime = 2.0
 
     # ----- Drowsiness detection ----- #
-    ear_obj = eye_closure_detection(EYE_AR_CONSEC_FRAMES=config['EYE_AR_CONSEC_FRAMES'], DEBUG=config['DEBUG'],
-                                    EAR_AVG_WIN=config['EAR_AVG_WIN'], DRIVER_ALERT_ALARM=config['DRIVER_ALERT_ALARM'])
+    ear_obj = eye_closure_detection(config)
     euler_angle = np.zeros((3, 1))
     # ----- Distraction detection ---- #
     if config['DISTR_DET']:
