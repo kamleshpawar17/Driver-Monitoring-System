@@ -2,10 +2,6 @@
 
 This repo contains a project for DSMS using computer vision algorithms.
 
-
-https://user-images.githubusercontent.com/32892726/147677418-da8aff33-cbfe-4a9c-abc1-88018e8dc022.mp4
-
-
 ## To run application
 ```
 python3 run_dsms.py
@@ -32,4 +28,6 @@ dlib
 
 ## Note: 
 Documentation for this project is in progress and will be updated here.
+
+https://user-images.githubusercontent.com/32892726/147677418-da8aff33-cbfe-4a9c-abc1-88018e8dc022.mp4
 
