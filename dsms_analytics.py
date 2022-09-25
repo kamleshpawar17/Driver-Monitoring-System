@@ -435,18 +435,11 @@ class eye_closure_detection:
 
     def __init__(
         self,
-        EYE_AR_CONSEC_FRAMES=5,
-        EAR_AVG_WIN=5,
-        WARNING_WIN=10,
-        WARNING_TIME=60,
-        ALERT_DUR=10.0,
-        WAR_DUR=1.0,
-        USE_CALIB=True,
-        DRIVER_ALERT_ALARM=True,
-        DEBUG=False,
+        config,
     ):
-        self.EAR_AVG_WIN = EAR_AVG_WIN  # window size for EAR averaging
-        self.USE_CALIB = USE_CALIB
+        # window size for EAR averaging
+        self.EAR_AVG_WIN = config['EAR_AVG_WIN']
+        self.USE_CALIB = config['USE_CALIB']
         if self.USE_CALIB:
             # Threshold for EAR, EAR<threshold mean eye closure positive
             self.EYE_AR_THRESH = 0.6 * np.load("./lib/ear_thrshld.npy")
@@ -454,13 +447,13 @@ class eye_closure_detection:
             self.EYE_AR_THRESH = 0.25
         print("EAR Threshold: ", self.EYE_AR_THRESH)
         self.BLINK_COUNT = 0  # Number of positive eye closure
-        self.EYE_AR_CONSEC_FRAMES = EYE_AR_CONSEC_FRAMES
-        self.WARNING_WIN = WARNING_WIN
-        self.WARNING_TIME = WARNING_TIME
-        self.ALERT_DUR = ALERT_DUR
-        self.WAR_DUR = WAR_DUR
-        self.DRIVER_ALERT_ALARM = DRIVER_ALERT_ALARM
-        self.DEBUG = DEBUG
+        self.EYE_AR_CONSEC_FRAMES = config['EYE_AR_CONSEC_FRAMES']
+        self.WARNING_WIN = config['WARNING_WIN']
+        self.WARNING_TIME = config['WARNING_TIME']
+        self.ALERT_DUR = config['ALERT_DUR']
+        self.WAR_DUR = config['WAR_DUR']
+        self.DRIVER_ALERT_ALARM = config['DRIVER_ALERT_ALARM']
+        self.DEBUG = config['DEBUG']
         self.ear_queue = self.createQueueWithFill(
             maxlen=self.EAR_AVG_WIN, val=1.0)
         self.time_at_alarm = time.time()
