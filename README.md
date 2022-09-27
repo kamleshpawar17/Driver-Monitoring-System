@@ -19,11 +19,13 @@ python3 run_dsms.py
 ```config.yaml``` has many options (see comments in the file) to tune DSMS to optimize accuracy/speed.
 
 ## Dependencies
-You should have OpenCV python working to run this application
+You should have OpenCV python installed and working to run this application.
+Also make sure that you are able to access camera with opencv prior to runnin this application
 ```
-opencv-python (4.0.0.1)
+opencv-python
 imutils
 dlib
+pyyaml
 ```
 
 ## Note: 
