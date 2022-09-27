@@ -20,7 +20,7 @@ python3 run_dsms.py
 
 ## Dependencies
 You should have OpenCV python installed and working to run this application.
-Also make sure that you are able to access camera with opencv prior to runnin this application
+Also make sure that you are able to access camera with opencv prior to running this application
 ```
 opencv-python
 imutils
