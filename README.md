@@ -28,9 +28,6 @@ dlib
 pyyaml
 ```
 
-## Note: 
-Documentation for this project is in progress and will be updated here.
-
 https://user-images.githubusercontent.com/32892726/198876465-5b6bdb4e-00ce-49ff-8090-f98c342f442c.mp4
 
 
